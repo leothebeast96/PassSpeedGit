@@ -13,6 +13,7 @@ namespace Passpeed
     {
         public bdCon objconexion { get; set; }
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="./login.css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"/> 
-     <link rel="shortcut icon" href="./IMG/ps.ico">
+     <link rel="shortcut icon" href="./IMG/ps.ico" />
     <title >PassSpeed</title>
 </head>
 <body>
@@ -28,10 +28,10 @@
         <br />
         <br />
         
-        <asp:TextBox id="txtContraseña" runat="server" placeholder="Ingresa tu Contraseña..." />
+        <asp:TextBox id="txtContraseña" runat="server" TextMode="Password" placeholder="Ingresa tu Contraseña..." />
         <br />
          <br />
-        
+        <asp:Label Text="" runat="server" ID="lblError" ForeColor="Salmon" />  <br />         
         <asp:Button Text="Iniciar Sesion" runat="server" ID="btniniciar" CssClass="logear" OnClick="btniniciar_Click"  />
         <br />
         <br />

@@ -12,7 +12,7 @@ namespace Passpeed
     public partial class directoCarrera : System.Web.UI.Page
     {
         public bdCon objconexion { get; set; }
-
+        public string idArea { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -24,7 +24,7 @@ namespace Passpeed
                 catch (Exception ex)
                 {
 
-                    throw ex;
+                    Response.Write(ex.Message);
                 }
                
             }
@@ -37,11 +37,12 @@ namespace Passpeed
         }
         private void LlenarTabla()
         {
-
+            Login objLogin = new Login();
             bdCon objconexion = new bdCon();
             DataTable dtResultado = new DataTable();
 
-            String Query = String.Format("exec consultarDirector");
+            idArea = objLogin.dt3.Rows[0][0].ToString();
+            String Query = String.Format("exec consultarDirector{0}",idArea);
             dtResultado = objconexion.GetDataTable(Query);
 
             gvDirector.DataSource = dtResultado;
