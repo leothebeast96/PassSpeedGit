@@ -13,12 +13,16 @@ namespace Passpeed
     {
         public bdCon objconexion { get; set; }
         public string idArea { get; set; }
+         public DataTable dt3 { get; set; }
+        public Login objLogin { get; set; }
+        public string Usuario { set; get; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 try
                 {
+                    UsuarioLog();
                     LlenarTabla();
                 }
                 catch (Exception ex)
@@ -28,12 +32,17 @@ namespace Passpeed
                 }
                
             }
-            else
-            {
-
-            }
+           
 
             
+        }
+        private void UsuarioLog()
+        {
+            Login objLogin = new Login();
+
+            Usuario = Session["Nombre"].ToString();
+            lblUsuario.Text = Usuario.ToString();
+
         }
         private void LlenarTabla()
         {
@@ -41,8 +50,9 @@ namespace Passpeed
             bdCon objconexion = new bdCon();
             DataTable dtResultado = new DataTable();
 
-            idArea = objLogin.dt3.Rows[0][0].ToString();
-            String Query = String.Format("exec consultarDirector{0}",idArea);
+            idArea = Session["IdArea"].ToString();
+           
+            String Query = String.Format("exec consultarDirector {0}", idArea);
             dtResultado = objconexion.GetDataTable(Query);
 
             gvDirector.DataSource = dtResultado;

@@ -10,24 +10,29 @@
 </head>
 <body>
     <header>
-        <b>Leo Nuñez Nolasco</b>
-        <a href="./Login.aspx">Cerrar Sesion</a>
+     
+        <asp:Label Text="" id="lblUsuario" CssClass="Usuario" runat="server" />   
+        <a id="Salir" class="Salir"  href="./Login.aspx" runat="server">
+            <img src="IMG/png/003-hogar.png" height="28" width="33" /></a>
     </header>
     <form id="frmRecursos" runat="server">
-        <div>
-            <aside>    
-                <asp:Label Text="🔎" runat="server" />
-            <input type="search" placeholder="Buscar..."  value="" id="inBuscar" />    
+      
+           
+            <aside>   
+                <br />
+                <br />
+                
+            <input type="search" placeholder="Buscar..."  value="" id="inBuscar" /> 
+             <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" />    
             </aside>
             <br />
             <br />
             <h1>Solicitudes de Salida</h1>
             <article>
-                <asp:GridView ID="gvRecursos" runat="server"></asp:GridView>
+                <asp:GridView ID="gvRecursos" CssClass="Tabla" runat="server"></asp:GridView>
+                <br />
+               
             </article>
-
-
-        </div>
     </form>
 </body>
 </html>

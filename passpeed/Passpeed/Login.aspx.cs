@@ -16,6 +16,7 @@ namespace Passpeed
        public string matricula { get; set; }
         public string contraseña { get; set; }
         public DataTable dt3 { get; set; }
+        public DataTable dt4 { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -27,6 +28,8 @@ namespace Passpeed
             {
                 matricula = txtUsuario.Text;
                 contraseña = txtContraseña.Text;
+                Session["Matricula"] = matricula.ToString() ;
+                Session["Contraseña"] = contraseña.ToString(); ;
                 bdCon objconexion = new bdCon();
                 objconexion.objSqlconn.Open();
                 SqlCommand cmd = new SqlCommand("select count(*) from Usuarios where Matricula='"+matricula+"' and Contra ='"+contraseña+"'",objconexion.objSqlconn);
@@ -41,8 +44,15 @@ namespace Passpeed
                     DataTable dt2 = new DataTable();
                     sda2.Fill(dt2);
                     cmd2.ExecuteNonQuery();
-                    if (dt2.Rows[0][0].ToString()== "1")
+                    if (dt2.Rows[0][0].ToString() == "1")
                     {
+                        SqlCommand cmd4 = new SqlCommand("select Nombre from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
+                        SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
+                        DataTable dt4 = new DataTable();
+                        sda4.Fill(dt4);
+                        cmd4.ExecuteNonQuery();
+
+                        Session["Nombre"] = dt4.Rows[0][0].ToString();
                         Response.Redirect("./Recursos.aspx");
                     }
                     else if(dt2.Rows[0][0].ToString() == "2")
@@ -51,7 +61,16 @@ namespace Passpeed
                         SqlDataAdapter sda3 = new SqlDataAdapter(cmd3);
                         DataTable dt3 = new DataTable();
                         sda3.Fill(dt3);
+                        cmd3.ExecuteNonQuery();
 
+                        SqlCommand cmd4 = new SqlCommand("select Nombre from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
+                        SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
+                        DataTable dt4 = new DataTable();
+                        sda4.Fill(dt4);
+                        cmd4.ExecuteNonQuery();
+
+                        Session["Nombre"] = dt4.Rows[0][0].ToString();
+                        Session["IdArea"] = dt3.Rows[0][0].ToString();
                         Response.Redirect("./directoCarrera.aspx");
                     }
                 }

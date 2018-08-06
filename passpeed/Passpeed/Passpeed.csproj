@@ -68,10 +68,18 @@
   <ItemGroup>
     <Content Include="directoCarrera.aspx" />
     <Content Include="Director.css" />
+    <Content Include="Global.asax" />
+    <Content Include="IMG\0-grande.jpg" />
+    <Content Include="IMG\160920-utm-universidad-tecnologica-de-morelia-800x533-atiempo.mx_.jpg" />
+    <Content Include="IMG\LLnhDC.png" />
     <Content Include="IMG\logo google.png" />
     <Content Include="IMG\pass.png" />
     <Content Include="IMG\pass2.png" />
     <Content Include="IMG\passcell.png" />
+    <Content Include="IMG\png\001-simbolo-de-suma.png" />
+    <Content Include="IMG\png\002-letra-x.png" />
+    <Content Include="IMG\png\003-hogar.png" />
+    <Content Include="IMG\png\004-usuario.png" />
     <Content Include="IMG\ps.ico" />
     <Content Include="Login.aspx" />
     <Content Include="login.css" />
@@ -86,6 +94,9 @@
     </Compile>
     <Compile Include="directoCarrera.aspx.designer.cs">
       <DependentUpon>directoCarrera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

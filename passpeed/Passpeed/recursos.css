@@ -1,27 +1,54 @@
 ﻿body {
     color: Black;
-    background-color: #dcedc8;
+    background-color: #f2f2f2;
 }
+
+
 h1{
     text-align:center;
 
 }
-header{
-    text-align:right;
+
+.Salir {
+    padding-right: 10px;
+    
+}
+.Tabla {
+    border-color:aliceblue;
+    border:none;
+}
+
+
+.Usuario {
+    padding-right: 90px;
+    font-size: larger;
+    font: bold;
+    font-style:italic;
+}
+
+
+
+header {
+    top:0;
+    width:100%;
+    height:30px;
+    text-align: right;
+    background-color: #8bc34a;
+    opacity: .850;
+}
+nav {
+    background-color: #8bc34a;
+    opacity: .850;
 }
 
 a{
-    text-align:right;
-}
-
-
-#tbRecursos{
-    font-size:20px;
     text-align:center;
-    border: double;
-    margin: 0 auto;
-    
 }
+
+
+
+
+
 article {
     width: 900px;
     margin-left: auto;
