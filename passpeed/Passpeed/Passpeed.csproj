@@ -85,6 +85,7 @@
     <Content Include="login.css" />
     <Content Include="Recursos.aspx" />
     <Content Include="recursos.css" />
+    <Content Include="RegistroEmpleado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="Recursos.aspx.designer.cs">
       <DependentUpon>Recursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroEmpleado.aspx.cs">
+      <DependentUpon>RegistroEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleado.aspx.designer.cs">
+      <DependentUpon>RegistroEmpleado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

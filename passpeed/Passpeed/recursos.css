@@ -1,6 +1,9 @@
 ﻿body {
     color: Black;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
+
+
+
 }
 
 
@@ -34,11 +37,12 @@ header {
     height:30px;
     text-align: right;
     background-color: #8bc34a;
-    opacity: .850;
+    opacity: .800;
 }
 nav {
-    background-color: #8bc34a;
-    opacity: .850;
+    background-color: black;
+    width:30px;
+    height:100%;
 }
 
 a{
@@ -54,7 +58,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-aside{
-    text-align:center;
+    background-color: gainsboro;
+    opacity:0.8;
+    border:groove;
 }

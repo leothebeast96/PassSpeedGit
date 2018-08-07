@@ -20,8 +20,8 @@
                 <br />
                 <br />
                
-            <input type="search" placeholder="Buscar..." value="" id="inBuscar" />
-                <asp:Button ID="btnBuscar" runat="server" Text="🔎" />
+                <asp:TextBox runat="server" id="txtbuscar"/>
+                <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" />
             </aside>
             <br />
             <br />

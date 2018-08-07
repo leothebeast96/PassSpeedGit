@@ -17,6 +17,7 @@ namespace Passpeed
         public string Usuario { get; set; }
         public string matriculaUsr { set; get; }
         public Login objLogin { set; get; }
+        public String buscar { set;get; }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -63,7 +64,14 @@ namespace Passpeed
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter();
+            bdCon objconexion = new bdCon();
+            DataTable dtBusqueda = new DataTable();
+            buscar = txtBuscar.Text;
+            String Queryb = String.Format("exec consultarRH2 '{0}'", buscar);
+            dtBusqueda = objconexion.GetDataTable(Queryb);
+
+            gvRecursos.DataSource = dtBusqueda;
+            gvRecursos.DataBind();
 
         }
     }

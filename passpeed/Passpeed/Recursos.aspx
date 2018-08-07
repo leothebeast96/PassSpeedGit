@@ -11,28 +11,34 @@
 <body>
     <header>
      
-        <asp:Label Text="" id="lblUsuario" CssClass="Usuario" runat="server" />   
+        <asp:Label Text="" id="lblUsuario" CssClass="Usuario" runat="server" />  
+        
         <a id="Salir" class="Salir"  href="./Login.aspx" runat="server">
-            <img src="IMG/png/003-hogar.png" height="28" width="33" /></a>
+
+            <img src="IMG/png/003-hogar.png" style="height: 25px; width: 31px" /></a>
     </header>
+    <br />
+    
+    <nav ></nav>
+    <br />
+    <br />
+    <article>
     <form id="frmRecursos" runat="server">
       
            
-            <aside>   
-                <br />
-                <br />
-                
-            <input type="search" placeholder="Buscar..."  value="" id="inBuscar" /> 
+           
+        <asp:TextBox runat="server"  id="txtBuscar" /> 
              <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" />    
-            </aside>
+          
             <br />
             <br />
             <h1>Solicitudes de Salida</h1>
-            <article>
-                <asp:GridView ID="gvRecursos" CssClass="Tabla" runat="server"></asp:GridView>
+            
+                <asp:GridView ID="gvRecursos" CssClass="Tabla" runat="server" GridLines="None" AllowPaging="true" AllowSorting="true" ></asp:GridView>
                 <br />
                
-            </article>
+            
     </form>
+   </article>
 </body>
 </html>

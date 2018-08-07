@@ -16,6 +16,7 @@ namespace Passpeed
          public DataTable dt3 { get; set; }
         public Login objLogin { get; set; }
         public string Usuario { set; get; }
+        public String buscar { set; get; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -58,6 +59,20 @@ namespace Passpeed
             gvDirector.DataSource = dtResultado;
             gvDirector.DataBind();
 
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            bdCon objconexion = new bdCon();
+            DataTable dtBusqueda = new DataTable();
+            buscar = txtbuscar.Text;
+
+            idArea = Session["IdArea"].ToString();
+            String Queryb = String.Format("exec consultarDirector2 {0},'{1}'", idArea,buscar);
+            dtBusqueda = objconexion.GetDataTable(Queryb);
+
+            gvDirector.DataSource = dtBusqueda;
+            gvDirector.DataBind();
         }
     }
 }
