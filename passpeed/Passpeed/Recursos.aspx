@@ -9,36 +9,32 @@
     <title></title>
 </head>
 <body>
+    <form id="frmRecursos"  runat="server">
     <header>
-     
-        <asp:Label Text="" id="lblUsuario" CssClass="Usuario" runat="server" />  
-        
-        <a id="Salir" class="Salir"  href="./Login.aspx" runat="server">
-
-            <img src="IMG/png/003-hogar.png" style="height: 25px; width: 31px" /></a>
+        <asp:Button Text="" ID="btnMenu" runat="server" OnClick="btnMenu_Click" />
+        <asp:TextBox runat="server"  id="txtBuscar" CssClass="buscar" /> 
+             <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" CssClass="btnbuscar" />
+       
+    <asp:Label Text="" id="lblUsuario" runat="server" />
+        <a href="Login.aspx"  >Salir </a>  
     </header>
     <br />
-    
-    <nav ></nav>
+    <br />
+    <aside class="lateral"></aside>
     <br />
     <br />
     <article>
-    <form id="frmRecursos" runat="server">
-      
            
-           
-        <asp:TextBox runat="server"  id="txtBuscar" /> 
-             <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" />    
-          
+                
             <br />
             <br />
             <h1>Solicitudes de Salida</h1>
             
-                <asp:GridView ID="gvRecursos" CssClass="Tabla" runat="server" GridLines="None" AllowPaging="true" AllowSorting="true" ></asp:GridView>
+                <asp:GridView ID="gvRecursos" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView>
                 <br />
                
-            
+    </article>          
     </form>
-   </article>
+  
 </body>
 </html>

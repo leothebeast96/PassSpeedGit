@@ -74,5 +74,10 @@ namespace Passpeed
             gvRecursos.DataBind();
 
         }
+
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

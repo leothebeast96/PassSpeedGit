@@ -1,11 +1,61 @@
 ﻿body {
     color: Black;
-    background-color: #ffffff;
-
-
+    background-image:url();
 
 }
 
+.mGrid {
+    width: 100%;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+}
+
+    .mGrid td {
+        padding: 2px;
+        border: solid 1px #c1c1c1;
+        color: #717171;
+    }
+
+    .mGrid th {
+        padding: 4px 2px;
+        color: #fff;
+        background: #17AC93 url(grd_head.png) repeat-x top;
+        border-left: solid 1px #525252;
+        font-size: 0.9em;
+    }
+
+    .mGrid .alt {
+        background: #fcfcfc url(grd_alt.png) repeat-x top;
+    }
+
+    .mGrid .pgr {
+        background: #424242 url(grd_pgr.png) repeat-x top;
+    }
+
+        .mGrid .pgr table {
+            margin: 5px 0;
+        }
+
+        .mGrid .pgr td {
+            border-width: 0;
+            padding: 0 6px;
+            border-left: solid 1px #666;
+            font-weight: bold;
+            color: #fff;
+            line-height: 12px;
+        }
+
+        .mGrid .pgr a {
+            color: #666;
+            text-decoration: none;
+        }
+
+            .mGrid .pgr a:hover {
+                color: #000;
+                text-decoration: none;
+            }
 
 h1{
     text-align:center;
@@ -16,10 +66,7 @@ h1{
     padding-right: 10px;
     
 }
-.Tabla {
-    border-color:aliceblue;
-    border:none;
-}
+
 
 
 .Usuario {
@@ -32,23 +79,42 @@ h1{
 
 
 header {
-    top:0;
-    width:100%;
-    height:30px;
-    text-align: right;
-    background-color: #8bc34a;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #17AC93;
     opacity: .800;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(117,116,117,1);
+    box-shadow: 0px 3px 7px 0px rgba(117,116,117,1);
 }
-nav {
-    background-color: black;
-    width:30px;
-    height:100%;
-}
-
-a{
-    text-align:center;
+a {
+    text-align: center;
+    color: black;
 }
 
+a:visited{
+
+    color:black;
+}
+.btnMenu{
+
+}
+
+#lateral {
+    background-color: #17AC93;
+    width: 158px;
+    height: 100%;
+    -webkit-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+    box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+}
+
+form{
+    background-color:aliceblue;
+   
+}
 
 
 
@@ -58,7 +124,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: gainsboro;
-    opacity:0.8;
-    border:groove;
+    background-color: aliceblue;
+    opacity: 0.8;
+    
 }
