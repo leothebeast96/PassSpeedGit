@@ -1,7 +1,33 @@
-﻿body {
+﻿
+html {
+    height: 100%
+}
+    body {
     color: Black;
-    background-image:url();
+    background-image: url();
+    height: 100%
+}
+.divmenu {
+    padding-left: 25px;
+    width: 24px;
+    height: 24px;
+    padding-top: 15px;
+    
+}
+.divbuscar {
+    padding-top: 0px;
+    padding-left:50px;
+}
 
+
+.btnmenu {
+    background-image: url('IMG/png/icons8-menú-24.png');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-color: #17AC93;
+    border: none;
+    
 }
 
 .mGrid {
@@ -10,6 +36,9 @@
     margin: 5px 0 10px 0;
     border: solid 1px #525252;
     border-collapse: collapse;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
 }
 
     .mGrid td {
@@ -98,12 +127,10 @@ a:visited{
 
     color:black;
 }
-.btnMenu{
 
-}
 
-#lateral {
-    background-color: #17AC93;
+.lateral {
+    background-color: white;
     width: 158px;
     height: 100%;
     -webkit-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
@@ -112,7 +139,7 @@ a:visited{
 }
 
 form{
-    background-color:aliceblue;
+    background-color:white;
    
 }
 

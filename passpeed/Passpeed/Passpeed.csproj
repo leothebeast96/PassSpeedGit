@@ -80,6 +80,8 @@
     <Content Include="IMG\png\002-letra-x.png" />
     <Content Include="IMG\png\003-hogar.png" />
     <Content Include="IMG\png\004-usuario.png" />
+    <Content Include="IMG\png\icons8-menú-24.png" />
+    <Content Include="IMG\png\icons8-menú-48.png" />
     <Content Include="IMG\ps.ico" />
     <Content Include="Login.aspx" />
     <Content Include="login.css" />

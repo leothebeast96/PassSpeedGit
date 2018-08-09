@@ -29,7 +29,7 @@
             <br />
             <asp:Label Text="" ID="lblerror" runat="server" />
             <article>
-                <asp:GridView ID="gvDirector" runat="server"></asp:GridView>
+                <asp:GridView ID="gvDirector"  CssClass="mGrid" runat="server"></asp:GridView>
             </article>
         </div>
     </form>
