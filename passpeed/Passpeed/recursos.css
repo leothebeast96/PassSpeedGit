@@ -1,27 +1,89 @@
 ﻿
 html {
-    height: 100%
+    position:relative;
+    height: 100%;
+    z-index: 0;
 }
-    body {
+body {
     color: Black;
     background-image: url();
-    height: 100%
+    height: 98%;
+}
+.buscar {
+    margin-top: 2px;
+    border: none;
+    background-color: #45BDA9;
+    opacity: .8;
+    font-size:20px;
+    float:left;
+    margin-left:23px;
 }
 .divmenu {
+    float:left;
     padding-left: 25px;
     width: 24px;
     height: 24px;
     padding-top: 15px;
+    padding-right:300px;
+}
+.divUsuario{
+    margin-top:8px;
+    float:right;
+    color:white;
+    font-size:20px;
+    margin-right:10px;
     
+
+
 }
+
+.divbuscar:hover {
+    filter: opacity(1);
+
+}
+
 .divbuscar {
-    padding-top: 0px;
-    padding-left:50px;
+    filter: opacity(.7);
+    float: left;
+    background-color: #45BDA9;
+    margin-top:8px;
+    margin-left:10px;
+    width:500px;
+    height: 35px;
+
+
+
 }
-
-
+.btnbuscar {
+    float:left;
+    margin-left:20px;
+    margin-top:8px;
+    background-color: #45BDA9;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url('IMG/png/lupa-para-buscar.png');
+    background-repeat: no-repeat;
+   
+}
+.btnSalir {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    margin-right:10px;
+    margin-top:8px;
+    margin-left:100px;
+    background-image: url('IMG/png/boton-de-inicio.png');
+    width: 24px;
+    background-repeat: no-repeat;
+    background-color: #17AC93;
+    }
+    .btnSalir:hover {
+        cursor: pointer;
+        
+    }
 .btnmenu {
-    background-image: url('IMG/png/icons8-menú-24.png');
+    background-image: url('IMG/png/ico8-menú24.png');
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -29,6 +91,10 @@ html {
     border: none;
     
 }
+    .btnmenu:hover {
+        cursor: pointer;
+    }
+
 
 .mGrid {
     width: 100%;
@@ -108,7 +174,7 @@ h1{
 
 
 header {
-    top: 0;
+    
     width: 100%;
     height: 50px;
     text-align: center;
@@ -120,38 +186,50 @@ header {
 }
 a {
     text-align: center;
-    color: black;
+    color: white;
+
 }
 
 a:visited{
 
-    color:black;
+    color:white;
 }
 
 
 .lateral {
+    float: left;
     background-color: white;
-    width: 158px;
-    height: 100%;
+    width: 168px;
+    height: 88%;
+    border:none;
+    transition: all cubic-bezier(1,0,0,1);
+    transition-timing-function: cubic-bezier(1,0,0,1);
     -webkit-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
     -moz-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
     box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+   
 }
 
-form{
-    background-color:white;
-   
+form {
+    border: none;
+    height: 99%;
+    background-color: white;
+    -webkit-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
+    box-shadow: 3px 0px 7px 0px rgba(117,116,117,1);
 }
 
 
 
 
 article {
+    float:left;
     width: 900px;
-    margin-left: auto;
+    background-color:white;
+    padding-left:100px;
+    margin-left: 20px;
     margin-right: auto;
     text-align: center;
-    background-color: aliceblue;
     opacity: 0.8;
     
 }

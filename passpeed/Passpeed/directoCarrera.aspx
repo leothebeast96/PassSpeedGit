@@ -5,33 +5,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="./Director.css" media="all" />
+    <link rel="stylesheet" href="Director.css" media="all" />
     <title></title>
+    <style type="text/css">
+        .buscar {
+           
+        }
+        
+        .arriba {
+            height: 47px;
+        }
+        
+    </style>
 </head>
 <body>
-     <header>
-        <asp:Label Text="" id="lblUsuario" CssClass="Usuario" runat="server" />   
-        <a id="Salir" class="Salir"  href="./Login.aspx" runat="server">
-            <img src="IMG/png/003-hogar.png" height="28" width="33" /></a>
+    <form id="frmDirector"  runat="server">
+    <header>
+        <div class="arriba">
+        <div class="divmenu">
+            <asp:Button Text="" CssClass="btnmenu" runat="server" Width="24px" Height="24px" />
+            
+        </div>
+        <div class="divbuscar">
+             <asp:Button ID="btnBuscar" runat="server" Text=""  CssClass="btnbuscar" OnClick="btnBuscar_Click1"  />
+            <asp:TextBox runat="server" Text="" placeholder="Buscar..." id="txtBuscar" CssClass="buscar" ForeColor="white" /> 
+           
+            </div>
+       <div class="divUsuario" >
+            <asp:Label Text="" id="lblUsuario" runat="server"  />
+            <asp:Button Text="" CssClass="btnSalir" runat="server" OnClick="Unnamed2_Click"   /> 
+       </div>
+    </div>
     </header>
-    <form id="frmRecursos" runat="server">
-        <div>
-            <aside>  
-                <br />
-                <br />
-               
-                <asp:TextBox runat="server" id="txtbuscar"/>
-                <asp:Button ID="btnBuscar" runat="server" Text="🔎" OnClick="btnBuscar_Click" />
-            </aside>
+    <br />
+    <aside class="lateral"></aside>
+    <br />
+    <br />
+    <br />
+    <article>
             <br />
             <br />
             <h1>Solicitudes de Salida</h1>
-            <br />
-            <asp:Label Text="" ID="lblerror" runat="server" />
-            <article>
-                <asp:GridView ID="gvDirector"  CssClass="mGrid" runat="server"></asp:GridView>
-            </article>
-        </div>
+                <asp:GridView ID="gvDirector" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView>
+                <br />
+    </article>          
     </form>
+  
 </body>
 </html>

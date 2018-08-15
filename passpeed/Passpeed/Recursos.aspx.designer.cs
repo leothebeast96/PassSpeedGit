@@ -22,15 +22,6 @@ namespace Passpeed {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmRecursos;
         
         /// <summary>
-        /// Control txtBuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
-        
-        /// <summary>
         /// Control btnBuscar.
         /// </summary>
         /// <remarks>
@@ -40,13 +31,22 @@ namespace Passpeed {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
+        /// Control txtBuscar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
+        
+        /// <summary>
         /// Control lblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lblUsuario;
         
         /// <summary>
         /// Control gvRecursos.

@@ -61,18 +61,25 @@ namespace Passpeed
 
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        
+
+        protected void btnBuscar_Click1(object sender, EventArgs e)
         {
             bdCon objconexion = new bdCon();
             DataTable dtBusqueda = new DataTable();
-            buscar = txtbuscar.Text;
+            buscar = txtBuscar.Text;
 
             idArea = Session["IdArea"].ToString();
-            String Queryb = String.Format("exec consultarDirector2 {0},'{1}'", idArea,buscar);
+            String Queryb = String.Format("exec consultarDirector2 {0},'{1}'", idArea, buscar);
             dtBusqueda = objconexion.GetDataTable(Queryb);
 
             gvDirector.DataSource = dtBusqueda;
             gvDirector.DataBind();
+        }
+
+        protected void Unnamed2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

@@ -75,10 +75,11 @@ aside {
 }
 
 p {
-    font-size: 32px;
+    font-size: 35px;
     font-style: italic;
     font-family: 'Amatic SC', cursive;
-    color:aliceblue;
+    color: black;
+   
 }
 
 
