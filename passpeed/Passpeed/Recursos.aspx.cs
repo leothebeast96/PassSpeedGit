@@ -57,8 +57,8 @@ namespace Passpeed
             String Query = String.Format("exec consultarRH");
             dtResultado = objconexion.GetDataTable(Query);
 
-            gvDirector.DataSource = dtResultado;
-            gvDirector.DataBind();
+            gvRecursos.DataSource = dtResultado;
+            gvRecursos.DataBind();
 
         }
 
@@ -71,7 +71,14 @@ namespace Passpeed
 
        
 
-        protected void btnBuscar_Click1(object sender, EventArgs e)
+      
+
+        protected void btnSalir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             bdCon objconexion = new bdCon();
             DataTable dtBusqueda = new DataTable();
@@ -79,13 +86,8 @@ namespace Passpeed
             String Queryb = String.Format("exec consultarRH2 '{0}'", buscar);
             dtBusqueda = objconexion.GetDataTable(Queryb);
 
-            gvDirector.DataSource = dtBusqueda;
-            gvDirector.DataBind();
-        }
-
-        protected void Unnamed2_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Login.aspx");
+            gvRecursos.DataSource = dtBusqueda;
+            gvRecursos.DataBind();
         }
     }
 }

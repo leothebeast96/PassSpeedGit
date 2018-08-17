@@ -5,12 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="./recursos.css" media="all" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="icon/css/fontello.css"/>
+    <link rel="stylesheet" href="css/recursos.css" media="all" />
+    <link rel="shortcut icon" href="./IMG/ps.ico" />
+    <title >PassSpeed Recursos</title>
     <style type="text/css">
-        .buscar {
-           
-        }
+       
         
         .arriba {
             height: 47px;
@@ -22,23 +23,33 @@
     <form id="frmRecursos"  runat="server">
     <header>
         <div class="arriba">
-        <div class="divmenu">
-            <asp:Button Text="" CssClass="btnmenu" runat="server" Width="24px" Height="24px" />
             
-        </div>
+                <div id="divmenu">
+                     <input type="checkbox" id="check"/>
+                     <label for="check" class="icon-menu">Menu</label>
+                    <nav class="menu">
+                        <ul>
+                            <li>Inicio</li>
+                            <li>Registrar Usuario</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                </div>
         <div class="divbuscar">
-             <asp:Button ID="btnBuscar" runat="server" Text="" OnClick="btnBuscar_Click" CssClass="btnbuscar" />
+            <asp:Button ID="btnBuscar" runat="server" Text="" CssClass="btnbuscar" OnClick="btnBuscar_Click" />
             <asp:TextBox runat="server" Text="" placeholder="Buscar..." id="txtBuscar" CssClass="buscar" ForeColor="white" /> 
            
             </div>
        <div class="divUsuario" >
-           <a href="" Text="" id="lblUsuario" runat="server"  />
-            <asp:Button Text="" CssClass="btnSalir" runat="server" OnClick="Unnamed2_Click" /> 
+           <asp:Label Text="" id="lblUsuario" runat="server"  />
+            <asp:Button Text="" CssClass="btnSalir" ID="btnSalir" runat="server" OnClick="btnSalir_Click" Height="24px" Width="24px"  /> 
        </div>
-    </div>
+      </div>
     </header>
     <br />
-    <aside class="lateral"></aside>
+       
     <br />
     <br />
     <br />

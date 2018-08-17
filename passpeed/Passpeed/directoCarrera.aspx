@@ -5,8 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="Director.css" media="all" />
-    <title></title>
+    <link rel="stylesheet" href="css/Director.css" media="all" />
+     <link rel="shortcut icon" href="./IMG/ps.ico" />
+    <title >PassSpeed Director</title>
     <style type="text/css">
         .buscar {
            
@@ -33,7 +34,7 @@
             </div>
        <div class="divUsuario" >
             <asp:Label Text="" id="lblUsuario" runat="server"  />
-            <asp:Button Text="" CssClass="btnSalir" runat="server" OnClick="Unnamed2_Click"   /> 
+            <asp:Button Text="" CssClass="btnSalir" runat="server" id="btnSalir" OnClick="btnSalir_Click"   /> 
        </div>
     </div>
     </header>

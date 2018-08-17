@@ -77,7 +77,7 @@ namespace Passpeed
             gvDirector.DataBind();
         }
 
-        protected void Unnamed2_Click(object sender, EventArgs e)
+        protected void btnSalir_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }

@@ -43,17 +43,19 @@ form {
         text-shadow: 0 1px 0 rgba(0,0,0,.1);
         margin-bottom: 19px;
     }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 #bg {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(IMG/160920-utm-universidad-tecnologica-de-morelia-800x533-atiempo.mx_.jpg) no-repeat center center fixed;
+    background: url(IMG/utm) no-repeat center center fixed;
     background-size: cover;
     -webkit-filter: blur(2px);
 }

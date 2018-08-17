@@ -66,11 +66,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\animation.css" />
+    <Content Include="css\fontello-codes.css" />
+    <Content Include="css\fontello-embedded.css" />
+    <Content Include="css\fontello-ie7-codes.css" />
+    <Content Include="css\fontello-ie7.css" />
+    <Content Include="css\fontello.css" />
     <Content Include="directoCarrera.aspx" />
-    <Content Include="Director.css" />
+    <Content Include="css\Director.css" />
     <Content Include="Global.asax" />
-    <Content Include="IMG\0-grande.jpg" />
-    <Content Include="IMG\160920-utm-universidad-tecnologica-de-morelia-800x533-atiempo.mx_.jpg" />
+    <Content Include="IMG\utm.jpg" />
     <Content Include="IMG\LLnhDC.png" />
     <Content Include="IMG\logo google.png" />
     <Content Include="IMG\pass.png" />
@@ -85,9 +90,9 @@
     <Content Include="IMG\png\lupa-para-buscar.png" />
     <Content Include="IMG\ps.ico" />
     <Content Include="Login.aspx" />
-    <Content Include="login.css" />
+    <Content Include="css\login.css" />
     <Content Include="Recursos.aspx" />
-    <Content Include="recursos.css" />
+    <Content Include="css\recursos.css" />
     <Content Include="RegistroEmpleado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
