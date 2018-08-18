@@ -55,7 +55,7 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(IMG/utm) no-repeat center center fixed;
+    background: url(../IMG/utm.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-filter: blur(2px);
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recursos.aspx.cs" Inherits="Passpeed.Recursos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarUsuario.aspx.cs" Inherits="Passpeed.RegistrarUsuario" %>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <form id="frmRecursos"  runat="server">
+    <form id="frmUsuarios"  runat="server">
     <header>
         <div class="arriba">
             
@@ -30,7 +30,6 @@
                     <nav class="menu">
                         <ul>
                             <li><asp:Image ImageUrl="~/IMG/bpng/001-boton-de-inicio.png" runat="server" /> <a href="Recursos.aspx"> Inicio</a></li>
-                             <li><asp:Image ImageUrl="~/IMG/bpng/archivo-pdf-google-drive.png" runat="server" /><a href="Login.aspx">  Generar Reporte</a></li>
                             <li><asp:Image ImageUrl="~/IMG/bpng/002-agregar-usuario.png" runat="server" /> <a href="#"> Agregar Usuario</a></li>
                             <li><asp:Image ImageUrl="~/IMG/bpng/engranaje-boton-ajustes.png" runat="server" /> <a href="Login.aspx">  Modificar Usuario</a></li>
                             <li><asp:Image ImageUrl="~/IMG/bpng/004-papelera.png" runat="server" />   <a href="#">  Dar de Baja Usuario</a></li>
@@ -58,10 +57,26 @@
     <article>
             <br />
             <br />
-            <h1>Solicitudes de Salida</h1>
-                <asp:GridView ID="gvRecursos" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView>
-                <br />
-            
+            <asp:Label Text="Nombre" runat="server" /> 
+            <asp:TextBox Text="" ID="txtNombre" runat="server" />
+            <asp:Label Text="Apellidos" runat="server" /> 
+            <asp:TextBox Text="" ID="txtApellidos" runat="server" />
+            <br />
+            <br />
+            <asp:Label Text="Telefono" runat="server" /> 
+            <asp:TextBox Text="" runat="server" ID="txtTel" />
+            <asp:Label Text="IdPuesto" runat="server" /> 
+            <asp:TextBox Text="" runat="server" ID="txtPuesto" />
+            <br />
+            <br />
+            <asp:Label Text="IdArea" runat="server" /> 
+            <asp:TextBox Text="" runat="server"  ID="txtArea"/>
+            <asp:Label Text="Matricula" runat="server" /> 
+            <asp:TextBox Text="" runat="server" ID="txtMatricula" />
+            <br />
+            <br />
+            <asp:Label Text="Contraseña" runat="server" /> 
+            <asp:TextBox Text="" runat="server" ID="txtContra" />
     </article>          
     </form>
   

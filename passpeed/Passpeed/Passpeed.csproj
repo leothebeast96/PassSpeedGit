@@ -75,6 +75,18 @@
     <Content Include="directoCarrera.aspx" />
     <Content Include="css\Director.css" />
     <Content Include="Global.asax" />
+    <Content Include="IMG\bpng\001-boton-de-inicio.png" />
+    <Content Include="IMG\bpng\002-agregar-usuario.png" />
+    <Content Include="IMG\bpng\003-carpeta.png" />
+    <Content Include="IMG\bpng\004-papelera.png" />
+    <Content Include="IMG\bpng\005-cerrar.png" />
+    <Content Include="IMG\bpng\006-comprobar.png" />
+    <Content Include="IMG\bpng\007-flecha.png" />
+    <Content Include="IMG\bpng\archivo-pdf-google-drive.png" />
+    <Content Include="IMG\bpng\boton-salir-a-aplicacion%281%29.png" />
+    <Content Include="IMG\bpng\engranaje-boton-ajustes.png" />
+    <Content Include="IMG\png\archivo-pdf-google-drive.png" />
+    <Content Include="IMG\png\boton-salir-a-aplicacion.png" />
     <Content Include="IMG\utm.jpg" />
     <Content Include="IMG\LLnhDC.png" />
     <Content Include="IMG\logo google.png" />
@@ -93,6 +105,7 @@
     <Content Include="css\login.css" />
     <Content Include="Recursos.aspx" />
     <Content Include="css\recursos.css" />
+    <Content Include="RegistrarUsuario.aspx" />
     <Content Include="RegistroEmpleado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -121,6 +134,13 @@
     </Compile>
     <Compile Include="Recursos.aspx.designer.cs">
       <DependentUpon>Recursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarUsuario.aspx.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroEmpleado.aspx.cs">
       <DependentUpon>RegistroEmpleado.aspx</DependentUpon>
