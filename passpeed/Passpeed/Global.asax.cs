@@ -23,7 +23,7 @@ namespace Passpeed
             Session["Matricula"] = "";
             Session["Contraseña"] = "";
             Session["IdArea"] = "";
-
+            Session["Apellidos"]=" ";
 
         }
 

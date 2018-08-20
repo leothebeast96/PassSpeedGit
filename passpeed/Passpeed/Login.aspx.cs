@@ -46,13 +46,14 @@ namespace Passpeed
                     cmd2.ExecuteNonQuery();
                     if (dt2.Rows[0][0].ToString() == "1")
                     {
-                        SqlCommand cmd4 = new SqlCommand("select Nombre from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
+                        SqlCommand cmd4 = new SqlCommand("select Nombre,Apellidos from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
                         SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
                         DataTable dt4 = new DataTable();
                         sda4.Fill(dt4);
                         cmd4.ExecuteNonQuery();
 
                         Session["Nombre"] = dt4.Rows[0][0].ToString();
+                        Session["Apellidos"] = dt4.Rows[0][1].ToString();
                         Response.Redirect("./Recursos.aspx");
                     }
                     else if(dt2.Rows[0][0].ToString() == "2")
@@ -63,13 +64,14 @@ namespace Passpeed
                         sda3.Fill(dt3);
                         cmd3.ExecuteNonQuery();
 
-                        SqlCommand cmd4 = new SqlCommand("select Nombre from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
+                        SqlCommand cmd4 = new SqlCommand("select Nombre,Apellidos from Empleados where Matricula='" + matricula + "'", objconexion.objSqlconn);
                         SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
                         DataTable dt4 = new DataTable();
                         sda4.Fill(dt4);
                         cmd4.ExecuteNonQuery();
 
                         Session["Nombre"] = dt4.Rows[0][0].ToString();
+                        Session["Apellidos"] = dt4.Rows[0][1].ToString();
                         Session["IdArea"] = dt3.Rows[0][0].ToString();
                         Response.Redirect("./directoCarrera.aspx");
                     }

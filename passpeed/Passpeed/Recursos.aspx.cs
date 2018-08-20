@@ -43,7 +43,7 @@ namespace Passpeed
         {
             Login objLogin = new Login();
 
-            Usuario = Session["Nombre"].ToString();
+            Usuario = Session["Nombre"].ToString() + " "+ Session["Apellidos"].ToString();
             lblUsuario.Text = Usuario.ToString(); 
            
         }
@@ -61,18 +61,7 @@ namespace Passpeed
             gvRecursos.DataBind();
 
         }
-
         
-
-        protected void btnMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-      
-
         protected void btnSalir_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");

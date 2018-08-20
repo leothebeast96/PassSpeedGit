@@ -66,12 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\animation.css" />
-    <Content Include="css\fontello-codes.css" />
-    <Content Include="css\fontello-embedded.css" />
-    <Content Include="css\fontello-ie7-codes.css" />
-    <Content Include="css\fontello-ie7.css" />
-    <Content Include="css\fontello.css" />
+    <Content Include="css\Registro.css" />
     <Content Include="directoCarrera.aspx" />
     <Content Include="css\Director.css" />
     <Content Include="Global.asax" />
@@ -106,7 +101,6 @@
     <Content Include="Recursos.aspx" />
     <Content Include="css\recursos.css" />
     <Content Include="RegistrarUsuario.aspx" />
-    <Content Include="RegistroEmpleado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -141,13 +135,6 @@
     </Compile>
     <Compile Include="RegistrarUsuario.aspx.designer.cs">
       <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroEmpleado.aspx.cs">
-      <DependentUpon>RegistroEmpleado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RegistroEmpleado.aspx.designer.cs">
-      <DependentUpon>RegistroEmpleado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

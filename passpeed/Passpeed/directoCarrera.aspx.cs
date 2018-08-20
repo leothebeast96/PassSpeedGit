@@ -41,7 +41,7 @@ namespace Passpeed
         {
             Login objLogin = new Login();
 
-            Usuario = Session["Nombre"].ToString();
+            Usuario = Session["Nombre"].ToString() + " " + Session["Apellidos"].ToString();
             lblUsuario.Text = Usuario.ToString();
 
         }
@@ -63,7 +63,7 @@ namespace Passpeed
 
         
 
-        protected void btnBuscar_Click1(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             bdCon objconexion = new bdCon();
             DataTable dtBusqueda = new DataTable();
@@ -77,7 +77,9 @@ namespace Passpeed
             gvDirector.DataBind();
         }
 
-        protected void btnSalir_Click(object sender, EventArgs e)
+        
+
+        protected void btnSalir_Click1(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }
