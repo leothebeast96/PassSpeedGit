@@ -31,9 +31,7 @@
                         <ul>
                             <li><asp:Image ImageUrl="~/IMG/bpng/001-boton-de-inicio.png" runat="server" /> <a href="Recursos.aspx"> Inicio</a></li>
                              <li><asp:Image ImageUrl="~/IMG/bpng/archivo-pdf-google-drive.png" runat="server" /><a href="#">  Generar Reporte</a></li>
-                            <li><asp:Image ImageUrl="~/IMG/bpng/002-agregar-usuario.png" runat="server" /> <a href="RegistrarUsuario.aspx"> Agregar Usuario</a></li>
-                            <li><asp:Image ImageUrl="~/IMG/bpng/engranaje-boton-ajustes.png" runat="server" /> <a href="Login.aspx">  Modificar Usuario</a></li>
-                            <li><asp:Image ImageUrl="~/IMG/bpng/004-papelera.png" runat="server" />   <a href="#">  Dar de Baja Usuario</a></li>
+                            <li><asp:Image ImageUrl="~/IMG/bpng/002-agregar-usuario.png" runat="server" /> <a href="RegistrarUsuario.aspx">  Usuarios</a></li>
                             <li><asp:Image ImageUrl="~/IMG/bpng/boton-salir-a-aplicacion(1).png" runat="server" /><a href="Login.aspx">  Salir</a></li>
                             
                         </ul>

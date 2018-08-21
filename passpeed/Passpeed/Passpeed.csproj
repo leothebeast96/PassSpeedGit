@@ -66,12 +66,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="actualizar.aspx" />
+    <Content Include="agregar.aspx" />
     <Content Include="css\Registro.css" />
+    <Content Include="DCPendiente.aspx" />
     <Content Include="directoCarrera.aspx" />
     <Content Include="css\Director.css" />
     <Content Include="Global.asax" />
     <Content Include="IMG\bpng\001-boton-de-inicio.png" />
+    <Content Include="IMG\bpng\001-error.png" />
     <Content Include="IMG\bpng\002-agregar-usuario.png" />
+    <Content Include="IMG\bpng\002-info.png" />
     <Content Include="IMG\bpng\003-carpeta.png" />
     <Content Include="IMG\bpng\004-papelera.png" />
     <Content Include="IMG\bpng\005-cerrar.png" />
@@ -104,6 +109,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actualizar.aspx.cs">
+      <DependentUpon>actualizar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="actualizar.aspx.designer.cs">
+      <DependentUpon>actualizar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agregar.aspx.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agregar.aspx.designer.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DCPendiente.aspx.cs">
+      <DependentUpon>DCPendiente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DCPendiente.aspx.designer.cs">
+      <DependentUpon>DCPendiente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="directoCarrera.aspx.cs">
       <DependentUpon>directoCarrera.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

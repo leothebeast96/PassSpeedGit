@@ -53,7 +53,7 @@ namespace Passpeed
 
             idArea = Session["IdArea"].ToString();
            
-            String Query = String.Format("exec consultarDirector {0}", idArea);
+            String Query = String.Format("exec consultarDirector '{0}'", idArea);
             dtResultado = objconexion.GetDataTable(Query);
 
             gvDirector.DataSource = dtResultado;
