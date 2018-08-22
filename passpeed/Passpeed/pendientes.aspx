@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="directoCarrera.aspx.cs" Inherits="Passpeed.directoCarrera" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pendientes.aspx.cs" Inherits="Passpeed.pendientes" %>
 
 <!DOCTYPE html>
 
@@ -7,6 +7,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="css/Director.css" media="all" />
      <link rel="shortcut icon" href="./IMG/ps.ico" />
+    <script language="javascript" type="text/javascript">
+    function Pendientes()
+    {
+        var altura =450;
+
+        var anchura=670;
+
+        // calculamos la posicion x e y para centrar la ventana
+
+        var y=parseInt((window.screen.height/2)-(altura/2));
+
+        var x=parseInt((window.screen.width/2)-(anchura/2));
+        // mostramos la ventana centrada
+        window.open('DCPendiente.aspx', 'Pases', 'width=' + anchura + ',height=' + altura + ',top=' + y + ',left=' + x + ',toolbar=no,location=no,status=no,menubar=no,scrollbars=no,directories=no,resizable=no');
+        }
+    </script>
     <title >PassSpeed Director</title>
     <style type="text/css">
         .buscar {
@@ -45,7 +61,7 @@
             </div>
        <div class="divUsuario" >
            <asp:Label Text="" id="lblUsuario" runat="server"  />
-            <asp:Button Text="" CssClass="btnSalir" ID="btnSalir" runat="server"  Height="24px" Width="24px" OnClick="btnSalir_Click1"  /> 
+            <asp:Button Text="" CssClass="btnSalir" ID="btnSalir" runat="server"  Height="24px" Width="24px" OnClick="btnSalir_Click"   /> 
        </div>
       </div>
     </header>
@@ -57,8 +73,8 @@
     <article>
             <br />
             <br />
-            <h1>Solicitudes de Salida</h1>
-                <div style="width: 100%; height: 300px; overflow: scroll"><asp:GridView ID="gvDirector" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView>  </div> 
+            <h1>Solicitudes Pendientes</h1>
+                <div style="width: 100%; height: 300px; overflow: scroll"><asp:GridView ID="gvPendientes" CssClass="mGrid" runat="server" GridLines="Both" AutoGenerateSelectButton="True" OnSelectedIndexChanging="gvPendientes_SelectedIndexChanging" ></asp:GridView>  </div> 
                 <br />
     </article>          
     </form>

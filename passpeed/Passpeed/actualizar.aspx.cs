@@ -22,6 +22,7 @@ namespace Passpeed
         public String Matricula { set; get; }
         public String Contraseña { set; get; }
 
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +30,7 @@ namespace Passpeed
             {
                 try
                 {
+                    
                     MatAct = Session["Actualizar"].ToString();
                     LlenarForm();
                 }
@@ -43,7 +45,7 @@ namespace Passpeed
 
 
         }
-
+         
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             Nombre = txtNombre.Text;
@@ -55,46 +57,47 @@ namespace Passpeed
             puesto = int.Parse(DDLPuesto.SelectedValue);
 
             bdCon objconexion = new bdCon();
-            string Query = string.Format("exec modificarEmplea2RH '{0}','{1}','{2}',{3},{4},'{5}','{6}'", Nombre, Apellidos, Telefono, puesto, area, Matricula, Contraseña);
+            string Query = string.Format("exec modificarEmplea2RH '{0}','{1}','{2}',{3},{4},'{5}','{6}'", Nombre, Apellidos, Matricula, Telefono.ToString(), puesto, area, Contraseña);
             DataTable dtresultado = objconexion.GetDataTable(Query);
+
+            objconexion.objSqlconn.Close();
 
 
             string script = "window.close();";
+            
             ScriptManager.RegisterStartupScript(Page, Page.GetType(), "closewindows", script, true);
+            
         }
         private void LlenarForm()
         {
+            
             bdCon objconexion = new bdCon();
             objconexion.objSqlconn.Open();
-            SqlCommand cmd = new SqlCommand("select Nombre from Empleados where Matricula='" + MatAct + "'", objconexion.objSqlconn);
+            SqlCommand cmd = new SqlCommand("select Nombre,Apellidos,Telefono from Empleados where Matricula='" + MatAct + "'", objconexion.objSqlconn);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             cmd.ExecuteNonQuery();
-            txtNombre.Text = dt.Rows[0][0].ToString();
-
-            SqlCommand cmd2 = new SqlCommand("select Apellidos from Empleados where Matricula='" + MatAct + "'", objconexion.objSqlconn);
-            SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
-            DataTable dt2 = new DataTable();
-            sda2.Fill(dt2);
-            cmd2.ExecuteNonQuery();
-            txtApellidos.Text = dt2.Rows[0][0].ToString();
-
-            SqlCommand cmd3 = new SqlCommand("select Telefono from Empleados where Matricula='" + MatAct + "'", objconexion.objSqlconn);
-            SqlDataAdapter sda3 = new SqlDataAdapter(cmd3);
-            DataTable dt3 = new DataTable();
-            sda3.Fill(dt3);
-            cmd3.ExecuteNonQuery();
-            txtTel.Text = dt3.Rows[0][0].ToString();
+            if (dt.Rows.Count != 0)
+            {
+                txtNombre.Text = dt.Rows[0][0].ToString();
+                txtApellidos.Text = dt.Rows[0][1].ToString();
+                txtTel.Text = dt.Rows[0][2].ToString();
+            }
 
             SqlCommand cmd4 = new SqlCommand("select Contra from Usuarios where Matricula='" + MatAct + "'", objconexion.objSqlconn);
             SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
             DataTable dt4 = new DataTable();
             sda4.Fill(dt4);
             cmd4.ExecuteNonQuery();
-            txtContra.Text = dt4.Rows[0][0].ToString();
-            
-            txtMatricula.Text =MatAct;
+            if (dt.Rows.Count != 0) {
+
+                txtContra.Text = dt4.Rows[0][0].ToString();
+
+                txtMatricula.Text = MatAct;
+            }
+
+              
           
 
             DataTable dtAreas = new DataTable();
@@ -110,6 +113,8 @@ namespace Passpeed
             DDLPuesto.DataValueField = "idPuesto";
             DDLPuesto.DataTextField = "puesto";
             DDLPuesto.DataBind();
+
+            objconexion.objSqlconn.Close();
         }
     }
 }

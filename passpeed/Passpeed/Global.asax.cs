@@ -25,6 +25,7 @@ namespace Passpeed
             Session["IdArea"] = "";
             Session["Apellidos"] = " ";
             Session["Actualizar"]= "";
+            Session["Estado"] = "";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

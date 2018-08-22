@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <link rel="stylesheet" href="css/recursos.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/recursos.css" media="all" />
     <link rel="shortcut icon" href="./IMG/ps.ico" />
     <title >PassSpeed Recursos</title>
     <style type="text/css">
@@ -57,7 +57,8 @@
             <br />
             <br />
             <h1>Solicitudes de Salida</h1>
-                <asp:GridView ID="gvRecursos" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView>
+               <div style="width: 100%; height: 300px; overflow: scroll"> <asp:GridView ID="gvRecursos" CssClass="mGrid" runat="server" GridLines="Both"  ></asp:GridView></div>
+                  
                 <br />
     </article>          
     </form>

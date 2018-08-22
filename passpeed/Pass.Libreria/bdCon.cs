@@ -9,7 +9,7 @@ namespace Pass.Libreria
    public class bdCon
     {
         public SqlConnection objSqlconn { get; set; }
-        private string strconn = @"Server=LEO-WORKSTATION\LEO;Database=Passspeed;User Id=sa; Password=heavymetal96;";
+        private string strconn = @"Server=sql5027.site4now.net;Database=DB_A3F5A1_pases;User Id=DB_A3F5A1_pases_admin; Password=ASDF1234;";
 
         public bdCon()
         {
@@ -20,7 +20,8 @@ namespace Pass.Libreria
         public bdCon(string server, string databaseName,string usuario, string pass)
         {
 
-            objSqlconn = new SqlConnection(string.Format("Server= {0};Database={1};User Id={2};Password={3};",server,databaseName,usuario,pass)); 
+            //objSqlconn = new SqlConnection(string.Format("Server= {0};Database={1};User Id={2};Password={3};",server,databaseName,usuario,pass));
+            objSqlconn = new SqlConnection(string.Format("Server= {0};Database={1};User Id={2};Password={3};", "sql5027.site4now.net", "DB_A3F5A1_pases", "DB_A3F5A1_pases_admin", "ASDF1234"));
 
 
         }

@@ -69,7 +69,29 @@ body {
     padding-right: 300px;
 }
 
-
+.agregar {
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 0;
+    background-color: #17AC93;
+    opacity: .9;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border-top-color: #9fb5b5;
+    border-left-color: #608586;
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+}
+.divtabla {
+   ;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+    box-shadow: 0px 2px 6px 0px rgba(117,116,117,1);
+}
 .divUsuario {
     margin-top: 8px;
     float: right;

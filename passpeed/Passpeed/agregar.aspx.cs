@@ -21,6 +21,7 @@ namespace Passpeed
         public String Telefono { set; get; }
         public String Matricula { set; get; }
         public String Contraseña { set; get; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -56,12 +57,10 @@ namespace Passpeed
             DataTable dtresultado = objconexion.GetDataTable(Query);
             
 
-            
-
             string script = "window.close();";
             ScriptManager.RegisterStartupScript(Page, Page.GetType(), "closewindows", script, true);
+            
 
-              
         }
 
         private void LlenarForm()

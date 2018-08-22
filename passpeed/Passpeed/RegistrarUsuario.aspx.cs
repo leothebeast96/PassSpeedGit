@@ -2,14 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Passpeed
-{   
-
+{
+    
     public partial class RegistrarUsuario : System.Web.UI.Page
     {
         public bdCon objconexion { get; set; }
@@ -19,6 +20,7 @@ namespace Passpeed
         public Login objLogin { set; get; }
         public String buscar { set; get; }
         public string eliminar { set; get; }
+        public String matriculaEdit { get; set; }
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace Passpeed
                 {
                     UsuarioLog();
                     LlenarTabla();
+                   
                 }
                 catch (Exception ex)
                 {
@@ -39,11 +42,8 @@ namespace Passpeed
 
             }
 
-
             btnAgregar.Attributes.Add("onClick", "abrirNuevo();");
-            btnActualizar.Attributes.Add("onClick", "Actualizar();");
-
-            Session["Actualizar"] = txtAct.Text;
+            
 
         }
 
@@ -62,8 +62,7 @@ namespace Passpeed
 
             DataTable dtResultado = new DataTable();
 
-            String Query = String.Format("select Nombre, Apellidos, Areas.area, Puestos.Puesto, Empleados.Matricula, Contra from empleados join usuarios on" +
-                " empleados.matricula = usuarios.matricula join Areas on Areas.idArea = Empleados.idArea join Puestos on Puestos.idPuesto = Empleados.Puesto");
+            String Query = String.Format("exec consultarEmpleadosRH");
             dtResultado = objconexion.GetDataTable(Query);
 
             gvUsuario.DataSource = dtResultado;
@@ -89,12 +88,14 @@ namespace Passpeed
             gvUsuario.DataBind();
 
         }
+        
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
+        protected void gvUsuario_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+             
             bdCon objconexion = new bdCon();
             DataTable dteliminar = new DataTable();
-            eliminar = txtMatricula.Text;
+            eliminar = gvUsuario.Rows[e.RowIndex].Cells[4].Text;
             String Queryb = String.Format("exec eliminarEmpleadosRH '{0}'", eliminar);
             dteliminar = objconexion.GetDataTable(Queryb);
 
@@ -103,11 +104,19 @@ namespace Passpeed
             LlenarTabla();
         }
 
-        
-
-        protected void btnActualizar_Click(object sender, EventArgs e)
+        protected void gvUsuario_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-
+            gvUsuario.Attributes.Add("onClick", "Actualizar();");
+            matriculaEdit = gvUsuario.Rows[e.NewSelectedIndex].Cells[5].Text;
+            Session["Actualizar"] = matriculaEdit.ToString();
+            
+            
         }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }
